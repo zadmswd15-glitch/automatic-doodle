@@ -1,0 +1,12 @@
+{
+  "name": "birthday-surprise",
+  "version": "1.0.0",
+  "description": "A beautiful birthday surprise website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

@@ -1,0 +1,96 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>زادزودة الحلوة</title>
+
+    <!-- دعم تثبيت التطبيق على الهاتف -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#ff4d6d">
+    <link rel="apple-touch-icon" href="New folder/cortis.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Pacifico&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <audio id="bg-music" loop>
+        <source src="CORTIS.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- شاشة تسجيل الدخول (الصفحة 0) -->
+    <div id="login-screen" class="login-overlay">
+        <div class="login-box">
+            <h2>تسجيل الدخول 🔒</h2>
+            <input type="text" id="gmail" placeholder="your gmail(EXAMPLE12@gmail.com)" />
+            <input type="password" id="password" placeholder="123456" />
+            <button id="login-btn">دخول</button>
+            <p id="login-error" class="hidden" style="color: red; margin-top: 10px; font-weight: bold;">بيانات غير
+                صحيحة، أنت لست زاد!</p>
+        </div>
+    </div>
+
+    <!-- شاشة البداية لتشغيل الصوت -->
+    <div id="start-screen" class="start-overlay" style="display: none;">
+        <div id="start-btn" class="start-cake" title="اضغط للبدء">🎂</div>
+    </div>
+
+    <!-- المحتوى الرئيسي -->
+    <div class="container hidden" id="main-container">
+
+        <!-- الجانب الأيمن: الصور -->
+        <div class="right-side">
+            <div class="gallery">
+                <div class="photo-frame" onclick="openLightbox('New folder/photo1.jpg')">
+                    <img src="New folder/photo1.jpg" alt="صورة 1">
+                </div>
+                <div class="photo-frame" onclick="openLightbox('New folder/photo2.jpg')">
+                    <img src="New folder/photo2.jpg" alt="صورة 2">
+                </div>
+            </div>
+        </div>
+
+        <!-- الجانب الأيسر: النصوص والهدية المرسومة -->
+        <div class="left-side">
+            <h1 class="title">🎂 Happy Birthday 🎂</h1>
+            <p class="subtitle">💖 كل عام وأنتِ بألف خير 💖</p>
+            <button id="magic-btn">المزيد من السحر ✨</button>
+
+            <div class="big-gift-drawing">
+                <span class="gift-emoji" id="big-gift">🎁</span>
+                <span class="arrow-emoji">➡</span>
+                <span class="heart-emoji" id="big-heart" title="اضغط هنا!">❤️</span>
+            </div>
+
+            <!-- قسم الرسائل السرية لزيد -->
+            <div class="secret-message-section">
+                <h3 style="color: #ff4d6d; font-size: 1.3rem; margin-bottom: 5px;">استني شيء اشتريه من 10 قروش إلى دينار 🎁</h3>
+                <h4 style="color: #ffd700; font-size: 1rem; margin-bottom: 20px;">اكتبي أي شيء في بالك لي يا قمر من هنا لزيد وما تخجلي لأي شيء في الدنيا 💖</h4>
+                <textarea id="secret-message" placeholder="اكتبي رسالتكِ هنا..."></textarea>
+                <button id="send-secret-btn">إرسال لزيد 🚀</button>
+                <p id="send-status" class="hidden" style="margin-top: 10px; font-weight: bold;"></p>
+            </div>
+
+            <!-- قسم رد زيد المباشر -->
+            <div id="zaid-reply-section" class="secret-message-section hidden" style="margin-top: 20px; border-color: #00ffcc; background: rgba(0, 255, 204, 0.05);">
+                <h3 style="color: #00ffcc; font-size: 1.1rem; margin-bottom: 10px;">رد زيد الأخير وصل! 💬</h3>
+                <p id="zaid-reply-text" style="color: white; font-size: 1.2rem; font-weight: bold; text-shadow: 0 0 10px rgba(0,255,204,0.5);"></p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- نافذة عرض الصور الكبيرة -->
+    <div id="lightbox" class="lightbox hidden" onclick="closeLightbox(event)">
+        <img id="lightbox-img" src="" alt="صورة مكبرة">
+        <br>
+        <h2 id="lightbox-msg" class="hidden">اني احبك بس ❤️</h2>
+        <a id="lightbox-link" href="https://www.youtube.com/@cortis_bighit" target="_blank" class="hidden yt-link">زيارة
+            قناة CORTIS 📺</a>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="roro ai.f"></script>
+</body>
+
+</html>
